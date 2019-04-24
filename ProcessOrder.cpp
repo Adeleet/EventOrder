@@ -4,17 +4,20 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
+#include <ctime>
+#include <../../stringToTimestamp.h>
+
 
 
 void readCSV() {
-
 	std::string line;
 	std::ifstream stream("c200-e50-r5000.csv");
 	while (stream) {
 		std::getline(stream, line);
 
-		int index1 = line.find_first_of(',');
-		int index2 = line.find_first_of(',', index1 + 1);
+		size_t  index1 = line.find_first_of(',');
+		size_t  index2 = line.find_first_of(',', index1 + 1u);
 		if (index1 < 0 || index2 < 0) {
 			break;
 		}
@@ -31,5 +34,6 @@ void readCSV() {
 
 int main()
 {
-	readCSV();
+	//parseDate("2019-04-29 00:46:24");
+	return 1;
 }
