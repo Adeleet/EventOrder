@@ -1,6 +1,6 @@
 #include<string>
 #include<ctime>
-
+#include <iostream>
 time_t stringToTimestamp(std::string date) {
 	/* Converts string to time_t number representing unix timestamp
 	Parameter date should have the format: 'YYYY-mm-dd HH:mm:ss'
